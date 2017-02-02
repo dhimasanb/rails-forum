@@ -9,4 +9,10 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
   end
+
+  private
+
+  def post_params
+    param.require(:post).permit(:title, :content)
+  end
 end
