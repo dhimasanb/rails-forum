@@ -24,6 +24,14 @@ class PostsController < ApplicationController
   def edit
   end
 
+  def update
+    if @post.update
+      redirect_to @post
+    else
+      render 'edit'
+    end
+  end
+
   private
 
   def find_post
