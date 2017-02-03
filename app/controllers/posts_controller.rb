@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
-  
+
   def index
   end
 
@@ -19,6 +19,9 @@ class PostsController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def edit
   end
 
   private
